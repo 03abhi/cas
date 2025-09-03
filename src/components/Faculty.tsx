@@ -3,44 +3,44 @@ import { Award, BookOpen, Users } from 'lucide-react';
 
 const faculty = [
   {
-    name: 'Dr. Sarah Mitchell',
-    credentials: 'FCAS, MAAA',
-    experience: '15+ years',
-    specialization: 'Property & Casualty',
-    image: '/teachers/t1.jpg',
-    achievements: ['Former Chief Actuary at Fortune 500 Insurance', 'Published researcher in actuarial science', 'Exam P & FM specialist']
+    name: 'Himanshu Awasthi',
+    credentials: 'Physics · IIT Kharagpur',
+    experience: '—',
+    specialization: 'Physics',
+    image: '/teachers/Himanshu Awasthi.png',
+    achievements: ['Concept-first teaching', 'Doubt resolution and exam-focused practice']
   },
   {
-    name: 'Michael Chen',
-    credentials: 'ACAS, PhD',
-    experience: '12+ years',
-    specialization: 'Risk Management',
-    image: '/teachers/t2.jpg',
-    achievements: ['Risk Management Consultant', 'CAS Exam Committee Member', 'MAS-I & MAS-II expert']
+    name: 'Debashmita',
+    credentials: 'Chemistry · MSc',
+    experience: '—',
+    specialization: 'Chemistry',
+    image: '/teachers/Debashmita.jpeg',
+    achievements: ['Strong fundamentals in Physical, Organic & Inorganic', 'Result-oriented strategies']
   },
   {
-    name: 'Dr. Emily Rodriguez',
-    credentials: 'FCAS, ASA',
-    experience: '18+ years',
-    specialization: 'Predictive Analytics',
-    image: '/teachers/t3.jpg',
-    achievements: ['Former VP of Analytics', 'Machine Learning in Insurance pioneer', 'Exam 5 & 6 specialist']
+    name: 'Bhavesh Sheth',
+    credentials: 'Maths & Physics · NIT Trichy',
+    experience: '—',
+    specialization: 'Mathematics, Physics',
+    image: '/teachers/bhavesh.jpeg',
+    achievements: ['Bridges intuition with problem solving', 'Focus on speed and accuracy']
   },
   {
-    name: 'David Thompson',
-    credentials: 'ACAS, CFA',
-    experience: '10+ years',
-    specialization: 'Financial Analysis',
-    image: '/teachers/t4.jpg',
-    achievements: ['Investment Strategy Expert', 'Financial Modeling Specialist', 'Exam FM top scorer']
+    name: 'Neha Pandiyan',
+    credentials: 'Maths · Masters',
+    experience: '—',
+    specialization: 'Mathematics',
+    image: '/teachers/Neha_Pandya_reduce_cropped-removebg-preview.png',
+    achievements: ['Clear explanations with real-life analogies', 'Personalized guidance']
   },
   {
-    name: 'Priya Kapoor',
-    credentials: 'ACAS',
-    experience: '8+ years',
-    specialization: 'Statistics & Probability',
-    image: '/teachers/t5.jpg',
-    achievements: ['Exam P mentor', 'University guest lecturer', 'Student success advocate']
+    name: 'Prashant S',
+    credentials: 'Chemistry · MSc',
+    experience: '—',
+    specialization: 'Chemistry',
+    image: '/teachers/Prashant-removebg-preview.png',
+    achievements: ['Topic-wise mastery sessions', 'Extensive practice and revisions']
   }
 ];
 
@@ -67,19 +67,31 @@ const Faculty: React.FC = () => {
               Our collaborative learning environment brings together dedicated students and experienced teachers to create an optimal learning experience.
             </p>
           </div>
-          
-          <div className="relative">
-            <img 
-              src="/Screenshot 2025-09-01 101050.png" 
-              alt="Students and Teachers" 
-              className="w-full h-96 object-cover rounded-2xl shadow-2xl"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
-            <div className="absolute bottom-6 left-6 right-6">
-              <h4 className="text-2xl font-bold text-white mb-2">Building Success Together</h4>
-              <p className="text-white/90">
-                Our students and teachers work collaboratively to achieve academic excellence and exam success.
-              </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="relative">
+              <img
+                src="/students-teachers/teacher and studend1.jpg"
+                alt="Students and Teachers 1"
+                className="w-full h-72 md:h-80 object-cover rounded-2xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl pointer-events-none"></div>
+            </div>
+            <div className="relative">
+              <img
+                src="/students-teachers/teacher and student2.jpg"
+                alt="Students and Teachers 2"
+                className="w-full h-72 md:h-80 object-cover rounded-2xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl pointer-events-none"></div>
+            </div>
+            <div className="relative">
+              <img
+                src="/students-teachers/teacher and student 3.jpg"
+                alt="Students and Teachers 3"
+                className="w-full h-72 md:h-80 object-cover rounded-2xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl pointer-events-none"></div>
             </div>
           </div>
         </div>
@@ -90,13 +102,11 @@ const Faculty: React.FC = () => {
               key={index}
               className="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-gray-700 group"
             >
-              <div className="aspect-w-1 aspect-h-1">
-                <img 
-                  src={instructor.image} 
-                  alt={instructor.name}
-                  className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
+              <img 
+                src={instructor.image} 
+                alt={instructor.name}
+                className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{instructor.name}</h3>
                 <div className="flex items-center space-x-2 mb-4">

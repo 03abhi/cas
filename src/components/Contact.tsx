@@ -125,9 +125,38 @@ const Contact: React.FC = () => {
                 <p className="mb-6 text-lg leading-relaxed">
                   Need immediate help? Our student success team is available for live chat during business hours.
                 </p>
-                <button className="w-full py-4 bg-white dark:bg-gray-100 text-primary-600 dark:text-primary-700 font-bold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-200 transition-all duration-300 transform hover:scale-[1.02] shadow-lg text-lg hover-lift">
-                  Start Live Chat
-                </button>
+                <a
+                  href="https://wa.me/918618197603?text=Hi%20CAS%20Classes%2C%20I%20need%20help%20with%20courses."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center w-full py-4 bg-white dark:bg-gray-100 text-primary-600 dark:text-primary-700 font-bold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-200 transition-all duration-300 transform hover:scale-[1.02] shadow-lg text-lg hover-lift"
+                >
+                  Start Live Chat on WhatsApp
+                </a>
+
+                <div className="mt-8 border-t border-white/20 pt-6">
+                  <div className="text-white/80 text-sm uppercase tracking-wider font-semibold mb-3">Phone</div>
+                  <a href="tel:8618197603" className="block text-2xl font-bold text-white hover:underline">+91 86181 97603</a>
+                </div>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-700">
+                <div className="mb-4">
+                  <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-wider font-semibold">Address</div>
+                  <div className="text-gray-900 dark:text-white font-bold mt-1">1st Floor, CAS Classes, ELV Commercial Center, Whitefield Main Rd, Whitefield, Bengaluru, Karnataka 560066</div>
+                </div>
+                <div className="aspect-[16/9] w-full overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700">
+                  <iframe
+                    title="CAS Classes Location"
+                    src="https://www.google.com/maps?q=1st%20Floor%2C%20CAS%20Classes%2C%20ELV%20Commercial%20Center%2C%20Whitefield%20Main%20Rd%2C%20Whitefield%2C%20Bengaluru%2C%20Karnataka%20560066&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
+                </div>
               </div>
             </div>
           </div>

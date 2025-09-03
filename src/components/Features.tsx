@@ -90,7 +90,7 @@ const Features: React.FC = () => {
             </div>
             <div className="relative">
               <img 
-                src="/training/parents-orientation.png" 
+                src="/training/student.jpg" 
                 alt="Parents Orientation Session" 
                 className="w-full h-80 object-cover rounded-2xl shadow-2xl"
               />
@@ -102,7 +102,7 @@ const Features: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div className="relative order-2 lg:order-1">
             <img 
-              src="/training/teachers-session.png" 
+              src="/training/teacher.jpg" 
               alt="Teachers Training Session" 
               className="w-full h-80 object-cover rounded-2xl shadow-2xl"
             />
