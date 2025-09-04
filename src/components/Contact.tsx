@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, Mail, Send } from 'lucide-react';
+import { Mail, Send, MessageCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -11,8 +11,19 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    
+    // Create email content
+    const subject = `Contact Form Submission from ${formData.name}`;
+    const body = `Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Message: ${formData.message}`;
+    
+    // Create mailto link
+    const mailtoLink = `mailto:info@casclasses.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -23,9 +34,10 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
+    <>
+    <section id="contact" className="py-8 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
       <div className="container-custom">
-        <div className="text-center mb-20 animate-fade-in">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Ready to Start Your Journey?
           </h2>
@@ -110,45 +122,23 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <div className="font-bold text-gray-900 dark:text-white text-xl mb-1">Email</div>
-                      <div className="text-gray-600 dark:text-gray-300 text-lg mb-1">learncasmarketing@gmail.com</div>
+                      <div className="text-gray-600 dark:text-gray-300 text-lg mb-1">info@casclasses.com</div>
                       <div className="text-gray-500 dark:text-gray-400 font-medium">We'll respond within 24 hours</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-primary-600 to-primary-700 dark:from-primary-500 dark:to-primary-600 rounded-2xl p-8 text-white shadow-xl">
-                <div className="flex items-center space-x-3 mb-6">
-                  <MessageCircle className="w-8 h-8" />
-                  <h4 className="text-2xl font-bold">Live Chat Available</h4>
-                </div>
-                <p className="mb-6 text-lg leading-relaxed">
-                  Need immediate help? Our student success team is available for live chat during business hours.
-                </p>
-                <a
-                  href="https://wa.me/918618197603?text=Hi%20CAS%20Classes%2C%20I%20need%20help%20with%20courses."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center w-full py-4 bg-white dark:bg-gray-100 text-primary-600 dark:text-primary-700 font-bold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-200 transition-all duration-300 transform hover:scale-[1.02] shadow-lg text-lg hover-lift"
-                >
-                  Start Live Chat on WhatsApp
-                </a>
 
-                <div className="mt-8 border-t border-white/20 pt-6">
-                  <div className="text-white/80 text-sm uppercase tracking-wider font-semibold mb-3">Phone</div>
-                  <a href="tel:8618197603" className="block text-2xl font-bold text-white hover:underline">+91 86181 97603</a>
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-gray-700">
+                <div className="mb-6">
+                  <div className="text-blue-600 dark:text-blue-400 text-sm uppercase tracking-wider font-semibold mb-2">Address</div>
+                  <div className="text-gray-900 dark:text-white font-bold text-lg">1st Floor, CAS Classes, ELV Commercial Center, Whitefield Main Rd, Whitefield, Bengaluru, Karnataka 560066</div>
                 </div>
-              </div>
-
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-700">
-                <div className="mb-4">
-                  <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-wider font-semibold">Address</div>
-                  <div className="text-gray-900 dark:text-white font-bold mt-1">1st Floor, CAS Classes, ELV Commercial Center, Whitefield Main Rd, Whitefield, Bengaluru, Karnataka 560066</div>
-                </div>
-                <div className="aspect-[16/9] w-full overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700">
+                <div className="aspect-[4/3] w-full overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700">
                   <iframe
                     title="CAS Classes Location"
-                    src="https://www.google.com/maps?q=1st%20Floor%2C%20CAS%20Classes%2C%20ELV%20Commercial%20Center%2C%20Whitefield%20Main%20Rd%2C%20Whitefield%2C%20Bengaluru%2C%20Karnataka%20560066&output=embed"
+                    src="https://www.google.com/maps?q=Whitefield+Main+Rd,+Whitefield,+Bengaluru,+Karnataka+560066&output=embed&z=15"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -163,6 +153,8 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </section>
+
+    </>
   );
 };
 

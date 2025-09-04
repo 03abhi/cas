@@ -3,65 +3,64 @@ import { Phone, MessageCircle, Star, Users, Award } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 section-padding transition-colors duration-300">
+    <section className="bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-0 pb-24 lg:pb-32 transition-colors duration-300">
       <div className="container-custom">
         <div className="grid lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 animate-fade-in-up">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="flex items-center space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <span className="text-gray-600 dark:text-gray-300 font-medium">Trusted by 10,000+ students</span>
-            </div>
-            
-            <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-8 leading-tight">
-              Excel in <span className="text-primary-600 dark:text-primary-400">CAS Exams</span> with Expert Guidance
+            <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+              Coaching students to build strong foundations through customized study plans
             </h1>
             
-            <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed max-w-2xl">
-              Join thousands of successful actuaries who've passed their CAS exams with our proven study methods, expert instructors, and comprehensive practice materials.
+            <p className="text-lg lg:text-xl font-bold text-primary-600 dark:text-primary-400 mb-8 italic">
+              Analyze Gaps. Practise. Improve.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 mb-16">
-              <a href="tel:8618197603" className="group btn-primary text-lg flex items-center justify-center hover-lift">
-                <Phone className="w-5 h-5 mr-2" />
-                <span>Call Us</span>
-              </a>
-              <a
-                href="https://wa.me/918618197603"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary text-lg flex items-center justify-center hover-lift"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                <span>Chat on WhatsApp</span>
-              </a>
+            
+            <div className="space-y-4 mb-6">
+              <div className="flex items-start space-x-4 animate-stagger-1">
+                <div className="flex-shrink-0 w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                  <i className="fas fa-search-plus text-blue-600 dark:text-blue-400 text-sm"></i>
+                </div>
+                <div className="flex-1">
+                  <span className="font-bold text-gray-900 dark:text-white">Deep Analysis:</span> 
+                  <span className="text-gray-700 dark:text-gray-300 ml-1">We deeply analyse each student's work, mistakes, and weakness.</span>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4 animate-stagger-2">
+                <div className="flex-shrink-0 w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                  <i className="fas fa-user-check text-green-600 dark:text-green-400 text-sm"></i>
+                </div>
+                <div className="flex-1">
+                  <span className="font-bold text-gray-900 dark:text-white">Personalized Plan for Each Student:</span> 
+                  <span className="text-gray-700 dark:text-gray-300 ml-1">With help of Analytics, we create personalized and focused practice plan for each student.</span>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4 animate-stagger-3">
+                <div className="flex-shrink-0 w-8 h-8 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+                  <i className="fas fa-users text-purple-600 dark:text-purple-400 text-sm"></i>
+                </div>
+                <div className="flex-1">
+                  <span className="font-bold text-gray-900 dark:text-white">Small & Focused Batches:</span> 
+                  <span className="text-gray-700 dark:text-gray-300 ml-1">Limited students in each batch.</span>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4 animate-stagger-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center">
+                  <i className="fas fa-bolt text-yellow-600 dark:text-yellow-400 text-sm"></i>
+                </div>
+                <div className="flex-1">
+                  <span className="font-bold text-gray-900 dark:text-white">Faster Learning Curve Through Personalization:</span> 
+                  <span className="text-gray-700 dark:text-gray-300 ml-1">Every student progresses at their own best pace.</span>
+                </div>
+              </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-8 lg:gap-12">
-              <div className="text-center">
-                <div className="flex items-center justify-center w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-xl mb-4 mx-auto">
-                  <Users className="w-8 h-8 text-primary-600 dark:text-primary-400" />
-                </div>
-                <div className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-1">10,000+</div>
-                <div className="text-gray-600 dark:text-gray-300 font-medium">Students</div>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center w-16 h-16 bg-secondary-100 dark:bg-secondary-900/30 rounded-xl mb-4 mx-auto">
-                  <Award className="w-8 h-8 text-secondary-600 dark:text-secondary-400" />
-                </div>
-                <div className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-1">95%</div>
-                <div className="text-gray-600 dark:text-gray-300 font-medium">Pass Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center w-16 h-16 bg-accent-100 dark:bg-accent-900/30 rounded-xl mb-4 mx-auto">
-                  <Star className="w-8 h-8 text-accent-600 dark:text-accent-400" />
-                </div>
-                <div className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-1">4.9/5</div>
-                <div className="text-gray-600 dark:text-gray-300 font-medium">Rating</div>
-              </div>
+            <div className="text-left">
+              <p className="text-lg lg:text-xl font-bold text-primary-600 dark:text-primary-400 italic">
+                Foundation . CBSE . IIT-JEE . NEET
+              </p>
             </div>
           </div>
 

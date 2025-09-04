@@ -1,0 +1,171 @@
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+const Slider: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      id: 1,
+      title: "Proven Results",
+      description: "Join thousands of successful students who achieved their goals with us",
+      image: "/success/toppers.png",
+      bgColor: "from-green-500 to-green-600"
+    },
+    {
+      id: 2,
+      title: "Top Performers",
+      description: "Celebrating our outstanding students and their remarkable achievements",
+      image: "/10toppers.jpg",
+      bgColor: "from-blue-500 to-blue-600"
+    },
+    {
+      id: 3,
+      title: "CAS Success Stories",
+      description: "Real results from our dedicated students who excelled in their exams",
+      image: "/casresult.jpg",
+      bgColor: "from-purple-500 to-purple-600"
+    },
+    {
+      id: 4,
+      title: "Academic Excellence",
+      description: "Our students consistently achieve top ranks and outstanding results",
+      image: "/Toppers (12).png",
+      bgColor: "from-orange-500 to-orange-600"
+    },
+    {
+      id: 5,
+      title: "Outstanding Achievements",
+      description: "Witness the success stories of our high-achieving students",
+      image: "/Toppers (11).png",
+      bgColor: "from-red-500 to-red-600"
+    }
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  return (
+    <section className="relative bg-gray-50 dark:bg-gray-800 transition-colors duration-300 overflow-hidden">
+      <div className="container-custom py-12">
+        <div className="text-center mb-8">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Success Stories from Our Students
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Our toppers who made us proud
+          </p>
+        </div>
+
+        <div className="relative max-w-6xl mx-auto">
+          {/* Slider Container */}
+          <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((slide) => (
+                <div
+                  key={slide.id}
+                  className="w-full flex-shrink-0 relative min-h-[500px] lg:min-h-[600px]"
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${slide.bgColor} opacity-90`}></div>
+                  <div className="relative z-10 flex items-center min-h-[500px] lg:min-h-[600px]">
+                    <div className="container-custom">
+                      <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div className="text-white">
+                          <h3 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                            {slide.title}
+                          </h3>
+                          <p className="text-xl lg:text-2xl leading-relaxed mb-8">
+                            {slide.description}
+                          </p>
+                          <div className="flex flex-col sm:flex-row gap-4">
+                            <a
+                              href="#contact"
+                              className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                            >
+                              Get Started Today
+                            </a>
+                            <a
+                              href="#faculty"
+                              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
+                            >
+                              Learn More
+                            </a>
+                          </div>
+                        </div>
+                        <div className="relative">
+                          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                            <img
+                              src={slide.image}
+                              alt={slide.title}
+                              className="w-full h-auto object-cover"
+                            />
+                            <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 text-gray-900 dark:text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 text-gray-900 dark:text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-8 space-x-3">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentSlide === index
+                    ? 'bg-primary-600 dark:bg-primary-400 scale-125'
+                    : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Slider;

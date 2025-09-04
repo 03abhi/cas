@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, MessageCircle, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, MessageCircle } from 'lucide-react';
 import { useDarkMode } from '../contexts/DarkModeContext';
 
 const Header: React.FC = () => {
@@ -9,10 +9,10 @@ const Header: React.FC = () => {
   return (
     <header className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
       <div className="container-custom">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <a href="#" className="flex items-center" aria-label="CAS Classes Home">
-              <img src="/logo.png" alt="CAS Classes" className="h-10 w-auto object-contain" />
+              <img src="/logo.jpg" alt="CAS Classes" className="h-16 w-auto object-contain" />
             </a>
           </div>
           
