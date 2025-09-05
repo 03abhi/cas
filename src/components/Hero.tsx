@@ -1,92 +1,163 @@
 import React from 'react';
 import { Phone, MessageCircle, Star, Users, Award } from 'lucide-react';
+import { useDarkMode } from '../contexts/DarkModeContext';
 
 const Hero: React.FC = () => {
+  const { isDarkMode } = useDarkMode();
+  
   return (
-    <section className="bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-0 pb-24 lg:pb-32 transition-colors duration-300">
+    <section className={`pt-0 pb-20 transition-colors duration-300 ${
+      isDarkMode 
+        ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900' 
+        : 'bg-gradient-to-br from-primary-50 via-white to-secondary-50'
+    }`}>
       <div className="container-custom">
-        <div className="grid lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-7 animate-fade-in-up">
-            <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-              Coaching students to build strong foundations through customized study plans
+        <div className="grid lg:grid-cols-2 gap-16 items-start min-h-[75vh] pt-12">
+          <div className="animate-fade-in-up">
+            <h1 className={`text-2xl lg:text-3xl font-bold mb-4 leading-relaxed ${
+              isDarkMode ? 'text-white' : 'text-gray-900'
+            }`}>
+              <span className="block">Coaching students to build strong</span>
+              <span className="block">foundations through customized</span>
+              <span className="block">study plans</span>
             </h1>
             
-            <p className="text-lg lg:text-xl font-bold text-primary-600 dark:text-primary-400 mb-8 italic">
+            <p className={`text-xl lg:text-2xl font-bold mb-8 italic ${
+              isDarkMode ? 'text-blue-400' : 'text-primary-600'
+            }`}>
               Analyze Gaps. Practise. Improve.
             </p>
             
-            <div className="space-y-4 mb-6">
+            <div className="space-y-3 mb-4">
               <div className="flex items-start space-x-4 animate-stagger-1">
-                <div className="flex-shrink-0 w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
-                  <i className="fas fa-search-plus text-blue-600 dark:text-blue-400 text-sm"></i>
+                <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                  isDarkMode ? 'bg-blue-900/30' : 'bg-blue-100'
+                }`}>
+                  <i className={`fas fa-search-plus text-sm ${
+                    isDarkMode ? 'text-blue-400' : 'text-blue-600'
+                  }`}></i>
                 </div>
                 <div className="flex-1">
-                  <span className="font-bold text-gray-900 dark:text-white">Deep Analysis:</span> 
-                  <span className="text-gray-700 dark:text-gray-300 ml-1">We deeply analyse each student's work, mistakes, and weakness.</span>
+                  <span className={`font-bold text-lg ${
+                    isDarkMode ? 'text-white' : 'text-gray-900'
+                  }`}>Deep Analysis:</span> 
+                  <span className={`ml-1 text-base ${
+                    isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                  }`}>We deeply analyse each student's work, mistakes, and weakness.</span>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4 animate-stagger-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                  <i className="fas fa-user-check text-green-600 dark:text-green-400 text-sm"></i>
+                <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                  isDarkMode ? 'bg-green-900/30' : 'bg-green-100'
+                }`}>
+                  <i className={`fas fa-user-check text-sm ${
+                    isDarkMode ? 'text-green-400' : 'text-green-600'
+                  }`}></i>
                 </div>
                 <div className="flex-1">
-                  <span className="font-bold text-gray-900 dark:text-white">Personalized Plan for Each Student:</span> 
-                  <span className="text-gray-700 dark:text-gray-300 ml-1">With help of Analytics, we create personalized and focused practice plan for each student.</span>
+                  <span className={`font-bold text-lg ${
+                    isDarkMode ? 'text-white' : 'text-gray-900'
+                  }`}>Personalized Plan for Each Student:</span> 
+                  <span className={`ml-1 text-base ${
+                    isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                  }`}>With help of Analytics, we create personalized and focused practice plan for each student.</span>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4 animate-stagger-3">
-                <div className="flex-shrink-0 w-8 h-8 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
-                  <i className="fas fa-users text-purple-600 dark:text-purple-400 text-sm"></i>
+                <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                  isDarkMode ? 'bg-purple-900/30' : 'bg-purple-100'
+                }`}>
+                  <i className={`fas fa-users text-sm ${
+                    isDarkMode ? 'text-purple-400' : 'text-purple-600'
+                  }`}></i>
                 </div>
                 <div className="flex-1">
-                  <span className="font-bold text-gray-900 dark:text-white">Small & Focused Batches:</span> 
-                  <span className="text-gray-700 dark:text-gray-300 ml-1">Limited students in each batch.</span>
+                  <span className={`font-bold text-lg ${
+                    isDarkMode ? 'text-white' : 'text-gray-900'
+                  }`}>Small & Focused Batches:</span> 
+                  <span className={`ml-1 text-base ${
+                    isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                  }`}>Limited students in each batch.</span>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4 animate-stagger-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center">
-                  <i className="fas fa-bolt text-yellow-600 dark:text-yellow-400 text-sm"></i>
+                <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                  isDarkMode ? 'bg-yellow-900/30' : 'bg-yellow-100'
+                }`}>
+                  <i className={`fas fa-bolt text-sm ${
+                    isDarkMode ? 'text-yellow-400' : 'text-yellow-600'
+                  }`}></i>
                 </div>
                 <div className="flex-1">
-                  <span className="font-bold text-gray-900 dark:text-white">Faster Learning Curve Through Personalization:</span> 
-                  <span className="text-gray-700 dark:text-gray-300 ml-1">Every student progresses at their own best pace.</span>
+                  <span className={`font-bold text-lg ${
+                    isDarkMode ? 'text-white' : 'text-gray-900'
+                  }`}>Faster Learning Curve Through Personalization:</span> 
+                  <span className={`ml-1 text-base ${
+                    isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                  }`}>Every student progresses at their own best pace.</span>
                 </div>
               </div>
             </div>
 
             <div className="text-left">
-              <p className="text-lg lg:text-xl font-bold text-primary-600 dark:text-primary-400 italic">
+              <p className={`text-lg lg:text-xl font-bold italic ${
+                isDarkMode ? 'text-blue-400' : 'text-primary-600'
+              }`}>
                 Foundation . CBSE . IIT-JEE . NEET
               </p>
             </div>
           </div>
 
-          <div className="lg:col-span-5 animate-slide-in-right">
-            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 lg:p-10 border border-gray-100 dark:border-gray-700 transition-colors duration-300">
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Get Your Free Study Plan</h3>
-              <form className="space-y-4">
+          <div className="animate-slide-in-right">
+            <div className={`rounded-2xl shadow-xl p-6 lg:p-8 border transition-colors duration-300 ${
+              isDarkMode 
+                ? 'bg-gray-800 border-gray-700' 
+                : 'bg-white border-gray-200'
+            }`}>
+              <h3 className={`text-2xl font-bold mb-6 text-center ${
+                isDarkMode ? 'text-white' : 'text-gray-900'
+              }`}>Get Your Free Study Plan</h3>
+              <form className="space-y-3">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Full Name</label>
+                  <label className={`block text-sm font-semibold mb-3 ${
+                    isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                  }`}>Full Name</label>
                   <input 
                     type="text" 
-                    className="w-full px-5 py-4 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 text-lg"
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 ${
+                      isDarkMode 
+                        ? 'border-gray-600 bg-gray-700 text-white' 
+                        : 'border-gray-200 bg-white text-gray-900'
+                    }`}
                     placeholder="Enter your full name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Email Address</label>
+                  <label className={`block text-sm font-semibold mb-3 ${
+                    isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                  }`}>Email Address</label>
                   <input 
                     type="email" 
-                    className="w-full px-5 py-4 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 text-lg"
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 ${
+                      isDarkMode 
+                        ? 'border-gray-600 bg-gray-700 text-white' 
+                        : 'border-gray-200 bg-white text-gray-900'
+                    }`}
                     placeholder="your.email@example.com"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Target Exam</label>
-                  <select className="w-full px-5 py-4 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 text-lg">
+                  <label className={`block text-sm font-semibold mb-3 ${
+                    isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                  }`}>Target Exam</label>
+                  <select className={`w-full px-4 py-3 border-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 ${
+                    isDarkMode 
+                      ? 'border-gray-600 bg-gray-700 text-white' 
+                      : 'border-gray-200 bg-white text-gray-900'
+                  }`}>
                     <option>Select your target exam</option>
                     <option>Exam P</option>
                     <option>Exam FM</option>
@@ -98,12 +169,14 @@ const Hero: React.FC = () => {
                 </div>
                 <button 
                   type="submit"
-                  className="w-full py-5 bg-primary-600 dark:bg-primary-500 text-white font-bold rounded-xl hover:bg-primary-700 dark:hover:bg-primary-600 transition-all duration-300 transform hover:scale-[1.02] shadow-xl hover:shadow-2xl text-lg"
+                  className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
                 >
                   Get My Free Study Plan
                 </button>
               </form>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-6 text-center">
+              <p className={`text-sm mt-6 text-center ${
+                isDarkMode ? 'text-gray-400' : 'text-gray-500'
+              }`}>
                 No spam. Unsubscribe at any time.
               </p>
             </div>

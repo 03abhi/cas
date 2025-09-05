@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 dark:bg-black text-white">
       <div className="container-custom py-16 lg:py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-2">
+          <div>
             <div className="text-3xl font-bold text-primary-400 mb-6">
               <div className="flex items-center space-x-2">
                 <span>CAS</span>
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div>
+          <div className="lg:col-start-3">
             <h4 className="text-xl font-bold mb-6">Company</h4>
             <ul className="space-y-3">
               <li><a href="#" className="text-gray-300 hover:text-primary-400 transition-colors font-medium text-lg">About Us</a></li>

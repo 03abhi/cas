@@ -65,9 +65,9 @@ const Slider: React.FC = () => {
 
   return (
     <section className="relative bg-gray-50 dark:bg-gray-800 transition-colors duration-300 overflow-hidden">
-      <div className="container-custom py-12">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+      <div className="container-custom py-10">
+        <div className="text-center mb-7">
+          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-5">
             Success Stories from Our Students
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -85,31 +85,25 @@ const Slider: React.FC = () => {
               {slides.map((slide) => (
                 <div
                   key={slide.id}
-                  className="w-full flex-shrink-0 relative min-h-[500px] lg:min-h-[600px]"
+                  className="w-full flex-shrink-0 relative min-h-[400px] lg:min-h-[500px]"
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${slide.bgColor} opacity-90`}></div>
-                  <div className="relative z-10 flex items-center min-h-[500px] lg:min-h-[600px]">
+                  <div className="relative z-10 flex items-center min-h-[400px] lg:min-h-[500px]">
                     <div className="container-custom">
-                      <div className="grid lg:grid-cols-2 gap-12 items-center">
+                      <div className="grid lg:grid-cols-2 gap-10 items-center">
                         <div className="text-white">
-                          <h3 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                          <h3 className="text-3xl lg:text-5xl font-bold mb-5 leading-tight">
                             {slide.title}
                           </h3>
-                          <p className="text-xl lg:text-2xl leading-relaxed mb-8">
+                          <p className="text-xl lg:text-2xl leading-relaxed mb-7">
                             {slide.description}
                           </p>
                           <div className="flex flex-col sm:flex-row gap-4">
                             <a
                               href="#contact"
-                              className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                              className="inline-flex items-center justify-center px-7 py-4 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                             >
                               Get Started Today
-                            </a>
-                            <a
-                              href="#faculty"
-                              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
-                            >
-                              Learn More
                             </a>
                           </div>
                         </div>
@@ -118,7 +112,13 @@ const Slider: React.FC = () => {
                             <img
                               src={slide.image}
                               alt={slide.title}
-                              className="w-full h-auto object-cover"
+                              className={`w-full object-cover ${
+                                slide.id === 2 || slide.id === 3 
+                                  ? 'h-auto' 
+                                  : slide.id === 5
+                                  ? 'h-[450px] lg:h-[500px]'
+                                  : 'h-[420px] lg:h-[470px]'
+                              }`}
                             />
                             <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                           </div>

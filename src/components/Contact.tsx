@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Send, MessageCircle } from 'lucide-react';
+import { Mail, Send, MessageCircle, Phone } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -46,12 +46,12 @@ Message: ${formData.message}`;
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-16">
-          <div className="lg:col-span-7">
-            <div className="bg-white dark:bg-gray-800 rounded-3xl p-10 lg:p-12 shadow-2xl border border-gray-100 dark:border-gray-700 transition-colors duration-300">
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Send us a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-7 lg:p-9 shadow-xl border border-gray-100 dark:border-gray-700 transition-colors duration-300 h-full">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-7">Send us a Message</h3>
+              <form onSubmit={handleSubmit} className="space-y-7 flex flex-col h-full">
+                <div className="grid md:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Name *</label>
                     <input 
@@ -60,7 +60,7 @@ Message: ${formData.message}`;
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-5 py-4 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 text-lg"
+                      className="w-full px-5 py-4 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300"
                       placeholder="Your full name"
                     />
                   </div>
@@ -72,7 +72,7 @@ Message: ${formData.message}`;
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-5 py-4 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 text-lg"
+                      className="w-full px-5 py-4 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -84,68 +84,71 @@ Message: ${formData.message}`;
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-5 py-4 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 text-lg"
+                    className="w-full px-5 py-4 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300"
                     placeholder="(555) 123-4567"
                   />
                 </div>
-                <div>
+                <div className="flex-1">
                   <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Message *</label>
                   <textarea 
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={5}
-                    className="w-full px-5 py-4 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 resize-none text-lg"
+                    rows={8}
+                    className="w-full px-5 py-4 border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 resize-none h-full"
+                    style={{ minHeight: '380px' }}
                     placeholder="Tell us about your goals and which exam you're preparing for..."
                   />
                 </div>
                 <button 
                   type="submit"
-                  className="group w-full flex items-center justify-center space-x-3 px-8 py-5 bg-primary-600 dark:bg-primary-500 text-white font-bold rounded-xl hover:bg-primary-700 dark:hover:bg-primary-600 transition-all duration-300 transform hover:scale-[1.02] shadow-xl hover:shadow-2xl text-lg hover-lift"
+                  className="group w-full flex items-center justify-center space-x-3 px-7 py-4 bg-primary-600 dark:bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-700 dark:hover:bg-primary-600 transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl hover-lift"
                 >
-                  <Send className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                  <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   <span>Send Message</span>
                 </button>
               </form>
             </div>
           </div>
 
-          <div className="lg:col-span-5">
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Get in Touch</h3>
-                <div className="space-y-8">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex items-center justify-center w-16 h-16 bg-secondary-100 dark:bg-secondary-900/30 rounded-xl flex-shrink-0">
-                      <Mail className="w-8 h-8 text-secondary-600 dark:text-secondary-400" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-gray-900 dark:text-white text-xl mb-1">Email</div>
-                      <div className="text-gray-600 dark:text-gray-300 text-lg mb-1">info@casclasses.com</div>
-                      <div className="text-gray-500 dark:text-gray-400 font-medium">We'll respond within 24 hours</div>
-                    </div>
+          <div>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-7 lg:p-9 shadow-xl border border-gray-100 dark:border-gray-700 transition-colors duration-300 h-full">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-7">Contact Information</h3>
+              <div className="space-y-7 flex flex-col h-full">
+                <div className="flex items-start space-x-4">
+                  <div className="flex items-center justify-center w-16 h-16 bg-secondary-100 dark:bg-secondary-900/30 rounded-xl flex-shrink-0">
+                    <Mail className="w-8 h-8 text-secondary-600 dark:text-secondary-400" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900 dark:text-white text-lg mb-1">Email</div>
+                    <div className="text-gray-600 dark:text-gray-300 mb-1">info@casclasses.com</div>
+                    <div className="text-gray-500 dark:text-gray-400 font-medium text-sm">We'll respond within 24 hours</div>
                   </div>
                 </div>
-              </div>
 
-
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-gray-700">
-                <div className="mb-6">
-                  <div className="text-blue-600 dark:text-blue-400 text-sm uppercase tracking-wider font-semibold mb-2">Address</div>
-                  <div className="text-gray-900 dark:text-white font-bold text-lg">1st Floor, CAS Classes, ELV Commercial Center, Whitefield Main Rd, Whitefield, Bengaluru, Karnataka 560066</div>
-                </div>
-                <div className="aspect-[4/3] w-full overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700">
-                  <iframe
-                    title="CAS Classes Location"
-                    src="https://www.google.com/maps?q=Whitefield+Main+Rd,+Whitefield,+Bengaluru,+Karnataka+560066&output=embed&z=15"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    allowFullScreen
-                  />
+                <div className="flex-1 flex flex-col">
+                  <div className="mb-4">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <Phone className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                      <div className="text-blue-600 dark:text-blue-400 text-sm uppercase tracking-wider font-semibold">Phone</div>
+                    </div>
+                    <div className="text-gray-900 dark:text-white font-bold text-sm mb-4">86181 97603</div>
+                    <div className="text-blue-600 dark:text-blue-400 text-sm uppercase tracking-wider font-semibold mb-2">Address</div>
+                    <div className="text-gray-900 dark:text-white font-bold text-sm">1st Floor, CAS Classes, ELV Commercial Center, Whitefield Main Rd, Whitefield, Bengaluru, Karnataka 560066</div>
+                  </div>
+                  <div className="flex-1 w-full overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700">
+                    <iframe
+                      title="CAS Classes Location"
+                      src="https://www.google.com/maps?q=Whitefield+Main+Rd,+Whitefield,+Bengaluru,+Karnataka+560066&output=embed&z=15"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0, minHeight: '380px' }}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      allowFullScreen
+                    />
+                  </div>
                 </div>
               </div>
             </div>

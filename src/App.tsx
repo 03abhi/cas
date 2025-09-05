@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Slider from './components/Slider';
 import Features from './components/Features';
 import Faculty from './components/Faculty';
+import StudentFeedback from './components/StudentFeedback';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { DarkModeProvider } from './contexts/DarkModeContext';
@@ -18,6 +19,7 @@ function App() {
         <Slider />
         <Features />
         <Faculty />
+        <StudentFeedback />
         <Contact />
         <Footer />
         <FloatingButtons />

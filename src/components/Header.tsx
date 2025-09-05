@@ -31,9 +31,9 @@ const Header: React.FC = () => {
             >
               {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
-            <a href="https://wa.me/918618197603" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 px-6 py-2.5 text-primary-600 dark:text-primary-400 border-2 border-primary-600 dark:border-primary-400 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300 font-medium hover-lift">
+            <a href="https://wa.me/918618197603" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 px-6 py-2.5 bg-green-500 hover:bg-green-600 text-white rounded-xl transition-all duration-300 font-medium hover-lift shadow-md">
               <MessageCircle className="w-4 h-4" />
-              <span>WhatsApp</span>
+              <span>Chat with us</span>
             </a>
             <a href="tel:8618197603" className="btn-primary hover-lift">Call Us</a>
           </div>
@@ -63,9 +63,9 @@ const Header: React.FC = () => {
               <a href="#testimonials" className="block px-3 py-3 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Reviews</a>
               <a href="#contact" className="block px-3 py-3 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Contact</a>
               <div className="pt-4 space-y-2">
-                <a href="https://wa.me/918618197603" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center space-x-2 px-6 py-3 text-primary-600 dark:text-primary-400 border-2 border-primary-600 dark:border-primary-400 rounded-xl font-medium hover-lift">
+                <a href="https://wa.me/918618197603" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-medium hover-lift shadow-md">
                   <MessageCircle className="w-4 h-4" />
-                  <span>WhatsApp</span>
+                  <span>Chat with us</span>
                 </a>
                 <a href="tel:8618197603" className="w-full btn-primary text-center hover-lift">Call Us</a>
               </div>
