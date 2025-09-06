@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Slider: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -75,7 +74,7 @@ const Slider: React.FC = () => {
           </p>
         </div>
 
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-7xl mx-auto">
           {/* Slider Container */}
           <div className="relative overflow-hidden rounded-3xl shadow-2xl">
             <div 
@@ -87,21 +86,21 @@ const Slider: React.FC = () => {
                   key={slide.id}
                   className="w-full flex-shrink-0 relative min-h-[400px] lg:min-h-[500px]"
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${slide.bgColor} opacity-90`}></div>
+                  <div className="absolute inset-0 bg-white dark:bg-gray-800"></div>
                   <div className="relative z-10 flex items-center min-h-[400px] lg:min-h-[500px]">
                     <div className="container-custom">
                       <div className="grid lg:grid-cols-2 gap-10 items-center">
-                        <div className="text-white">
+                        <div className="text-gray-900 dark:text-white">
                           <h3 className="text-3xl lg:text-5xl font-bold mb-5 leading-tight">
                             {slide.title}
                           </h3>
-                          <p className="text-xl lg:text-2xl leading-relaxed mb-7">
+                          <p className="text-xl lg:text-2xl leading-relaxed mb-7 text-gray-600 dark:text-gray-300">
                             {slide.description}
                           </p>
                           <div className="flex flex-col sm:flex-row gap-4">
                             <a
                               href="#contact"
-                              className="inline-flex items-center justify-center px-7 py-4 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                              className="inline-flex items-center justify-center px-7 py-4 bg-primary-600 dark:bg-primary-500 text-white font-bold rounded-xl hover:bg-primary-700 dark:hover:bg-primary-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
                             >
                               Get Started Today
                             </a>
@@ -115,8 +114,12 @@ const Slider: React.FC = () => {
                               className={`w-full object-cover ${
                                 slide.id === 2 || slide.id === 3 
                                   ? 'h-auto' 
-                                  : slide.id === 5
+                                  : slide.id === 1
                                   ? 'h-[450px] lg:h-[500px]'
+                                  : slide.id === 4
+                                  ? 'h-[450px] lg:h-[500px]'
+                                  : slide.id === 5
+                                  ? 'h-[460px] lg:h-[510px]'
                                   : 'h-[420px] lg:h-[470px]'
                               }`}
                             />
@@ -130,21 +133,6 @@ const Slider: React.FC = () => {
               ))}
             </div>
 
-            {/* Navigation Arrows */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 text-gray-900 dark:text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 text-gray-900 dark:text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-              aria-label="Next slide"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
           </div>
 
           {/* Dots Indicator */}

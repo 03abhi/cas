@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Slider from './components/Slider';
-import Features from './components/Features';
 import Faculty from './components/Faculty';
 import StudentFeedback from './components/StudentFeedback';
 import Contact from './components/Contact';
@@ -17,7 +16,6 @@ function App() {
         <Header />
         <Hero />
         <Slider />
-        <Features />
         <Faculty />
         <StudentFeedback />
         <Contact />

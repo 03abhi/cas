@@ -2,73 +2,66 @@ import React from 'react';
 
 const Features: React.FC = () => {
   return (
-    <section id="features" className="py-12 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+    <section id="features" className="section-padding bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
       <div className="container-custom">
-        {/* Training Sessions Section */}
-        <div className="mb-12">
-          <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            Our Training Sessions
-          </h3>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Parents Orientation Session</h4>
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                We understand that parents play a crucial role in their child's educational journey. Our orientation sessions provide parents with comprehensive information about our programs, teaching methodologies, and how they can support their children's learning process.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-600 dark:text-gray-300">Understanding our curriculum and teaching approach</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-600 dark:text-gray-300">Progress tracking and communication methods</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-600 dark:text-gray-300">Supporting your child's learning at home</span>
-                </li>
-              </ul>
-            </div>
-            <div className="relative">
-              <img 
-                src="/training/student.jpg" 
-                alt="Parents Orientation Session" 
-                className="w-full h-80 object-cover rounded-2xl shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
-            </div>
-          </div>
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-responsive-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+            Why Choose CAS Classes?
+          </h2>
+          <p className="text-responsive-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            We've helped thousands of students pass their CAS exams with our proven methodology and expert guidance.
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative order-2 lg:order-1">
-            <img 
-              src="/training/teacher.jpg" 
-              alt="Teachers Training Session" 
-              className="w-full h-80 object-cover rounded-2xl shadow-2xl"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+        <div className="grid-responsive">
+          <div className="text-center p-4 sm:p-6 bg-white dark:bg-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <span className="text-xl sm:text-2xl">🎯</span>
+            </div>
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">Personalized Learning</h3>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">Customized study plans tailored to each student's strengths and weaknesses</p>
           </div>
-          <div className="space-y-6 order-1 lg:order-2">
-            <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Teachers Training Session</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-secondary-600 dark:bg-secondary-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-                <span className="text-gray-600 dark:text-gray-300">Advanced teaching techniques and methodologies</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-secondary-600 dark:bg-secondary-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-                <span className="text-gray-600 dark:text-gray-300">Latest exam patterns and question analysis</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-secondary-600 dark:bg-secondary-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-                <span className="text-gray-600 dark:text-gray-300">Student engagement and motivation strategies</span>
-              </li>
-            </ul>
+
+          <div className="text-center p-4 sm:p-6 bg-white dark:bg-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-secondary-100 dark:bg-secondary-900/30 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <span className="text-xl sm:text-2xl">📊</span>
+            </div>
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">Progress Tracking</h3>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">Regular assessments and detailed progress reports to monitor improvement</p>
+          </div>
+
+          <div className="text-center p-4 sm:p-6 bg-white dark:bg-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <span className="text-xl sm:text-2xl">👥</span>
+            </div>
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">Small Batch Sizes</h3>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">Limited students per batch ensuring individual attention and faster learning</p>
+          </div>
+
+          <div className="text-center p-4 sm:p-6 bg-white dark:bg-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <span className="text-xl sm:text-2xl">🏆</span>
+            </div>
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">Proven Results</h3>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">Consistent track record of student success in various competitive exams</p>
+          </div>
+
+          <div className="text-center p-4 sm:p-6 bg-white dark:bg-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <span className="text-xl sm:text-2xl">📚</span>
+            </div>
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">Comprehensive Material</h3>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">Well-researched study materials and practice tests for thorough preparation</p>
+          </div>
+
+          <div className="text-center p-4 sm:p-6 bg-white dark:bg-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <span className="text-xl sm:text-2xl">🤝</span>
+            </div>
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">Expert Faculty</h3>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">Experienced teachers with deep subject knowledge and teaching expertise</p>
           </div>
         </div>
-
       </div>
     </section>
   );

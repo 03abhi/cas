@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Send, MessageCircle, Phone } from 'lucide-react';
+import { Mail, Send, MessageCircle, Phone, MapPin } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -46,9 +46,9 @@ Message: ${formData.message}`;
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-7 lg:p-9 shadow-xl border border-gray-100 dark:border-gray-700 transition-colors duration-300 h-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-stretch">
+          <div className="flex flex-col">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-7 lg:p-9 shadow-xl border border-gray-100 dark:border-gray-700 transition-colors duration-300 h-full flex flex-col">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-7">Send us a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-7 flex flex-col h-full">
                 <div className="grid md:grid-cols-2 gap-5">
@@ -112,38 +112,51 @@ Message: ${formData.message}`;
             </div>
           </div>
 
-          <div>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-7 lg:p-9 shadow-xl border border-gray-100 dark:border-gray-700 transition-colors duration-300 h-full">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-7">Contact Information</h3>
-              <div className="space-y-7 flex flex-col h-full">
-                <div className="flex items-start space-x-4">
-                  <div className="flex items-center justify-center w-16 h-16 bg-secondary-100 dark:bg-secondary-900/30 rounded-xl flex-shrink-0">
-                    <Mail className="w-8 h-8 text-secondary-600 dark:text-secondary-400" />
+          <div className="flex flex-col">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-6 lg:p-7 shadow-xl border border-gray-100 dark:border-gray-700 transition-colors duration-300 h-full flex flex-col">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-5">Contact Information</h3>
+              <div className="space-y-5 flex flex-col h-full">
+                <div className="flex items-start space-x-3">
+                  <div className="flex items-center justify-center w-12 h-12 bg-secondary-100 dark:bg-secondary-900/30 rounded-lg flex-shrink-0">
+                    <Mail className="w-6 h-6 text-secondary-600 dark:text-secondary-400" />
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900 dark:text-white text-lg mb-1">Email</div>
-                    <div className="text-gray-600 dark:text-gray-300 mb-1">info@casclasses.com</div>
-                    <div className="text-gray-500 dark:text-gray-400 font-medium text-sm">We'll respond within 24 hours</div>
+                    <div className="font-bold text-gray-900 dark:text-white text-base mb-1">Email</div>
+                    <div className="text-gray-600 dark:text-gray-300 mb-1 text-sm">info@casclasses.com</div>
+                    <div className="text-gray-500 dark:text-gray-400 font-medium text-xs">We'll respond within 24 hours</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <div className="flex items-center justify-center w-12 h-12 bg-secondary-100 dark:bg-secondary-900/30 rounded-lg flex-shrink-0">
+                    <Phone className="w-6 h-6 text-secondary-600 dark:text-secondary-400" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900 dark:text-white text-base mb-1">Phone</div>
+                    <div className="text-gray-600 dark:text-gray-300 mb-1 text-sm">86181 97603</div>
+                    <div className="text-gray-500 dark:text-gray-400 font-medium text-xs">Available 9 AM - 6 PM</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <div className="flex items-center justify-center w-12 h-12 bg-secondary-100 dark:bg-secondary-900/30 rounded-lg flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-secondary-600 dark:text-secondary-400" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900 dark:text-white text-base mb-1">Address</div>
+                    <div className="text-gray-600 dark:text-gray-300 mb-1 text-sm">1st Floor, CAS Classes, ELV Commercial Center, Whitefield Main Rd, Whitefield, Bengaluru, Karnataka 560066</div>
+                    <div className="text-gray-500 dark:text-gray-400 font-medium text-xs">Near Whitefield Metro Station</div>
                   </div>
                 </div>
 
                 <div className="flex-1 flex flex-col">
-                  <div className="mb-4">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <Phone className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                      <div className="text-blue-600 dark:text-blue-400 text-sm uppercase tracking-wider font-semibold">Phone</div>
-                    </div>
-                    <div className="text-gray-900 dark:text-white font-bold text-sm mb-4">86181 97603</div>
-                    <div className="text-blue-600 dark:text-blue-400 text-sm uppercase tracking-wider font-semibold mb-2">Address</div>
-                    <div className="text-gray-900 dark:text-white font-bold text-sm">1st Floor, CAS Classes, ELV Commercial Center, Whitefield Main Rd, Whitefield, Bengaluru, Karnataka 560066</div>
-                  </div>
-                  <div className="flex-1 w-full overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700">
+                  <div className="w-full overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700">
                     <iframe
                       title="CAS Classes Location"
                       src="https://www.google.com/maps?q=Whitefield+Main+Rd,+Whitefield,+Bengaluru,+Karnataka+560066&output=embed&z=15"
                       width="100%"
-                      height="100%"
-                      style={{ border: 0, minHeight: '380px' }}
+                      height="400"
+                      style={{ border: 0 }}
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
                       allowFullScreen
@@ -151,6 +164,71 @@ Message: ${formData.message}`;
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Training Sessions Section */}
+        <div className="mt-16">
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            Our Training Sessions
+          </h3>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Parents Orientation Session</h4>
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                We understand that parents play a crucial role in their child's educational journey. Our orientation sessions provide parents with comprehensive information about our programs, teaching methodologies, and how they can support their children's learning process.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-600 dark:text-gray-300">Understanding our curriculum and teaching approach</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-600 dark:text-gray-300">Progress tracking and communication methods</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-600 dark:text-gray-300">Supporting your child's learning at home</span>
+                </li>
+              </ul>
+            </div>
+            <div className="relative">
+              <img 
+                src="/training/student.jpg" 
+                alt="Parents Orientation Session" 
+                className="w-full h-80 object-cover rounded-2xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center mt-12">
+            <div className="relative order-2 lg:order-1">
+              <img 
+                src="/training/teacher.jpg" 
+                alt="Teachers Training Session" 
+                className="w-full h-80 object-cover rounded-2xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+            </div>
+            <div className="space-y-6 order-1 lg:order-2">
+              <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Teachers Training Session</h4>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-secondary-600 dark:bg-secondary-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-600 dark:text-gray-300">Advanced teaching techniques and methodologies</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-secondary-600 dark:bg-secondary-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-600 dark:text-gray-300">Latest exam patterns and question analysis</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-secondary-600 dark:bg-secondary-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                  <span className="text-gray-600 dark:text-gray-300">Student engagement and motivation strategies</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
