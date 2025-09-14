@@ -70,42 +70,42 @@ const StudentFeedback: React.FC = () => {
         <div className="relative max-w-7xl mx-auto">
           {/* Auto-scrolling Container */}
           <div className="relative overflow-hidden rounded-3xl">
-            <div className="flex gap-2 sm:gap-4 md:gap-6 animate-scroll">
+            <div className="flex gap-1 sm:gap-4 md:gap-6 animate-scroll">
               {/* Duplicate the testimonials for seamless loop */}
               {[...testimonials, ...testimonials].map((item, index) => (
                 <div
                   key={`${item.id}-${index}`}
-                  className={`rounded-2xl p-3 sm:p-6 shadow-xl border transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 flex-shrink-0 w-64 sm:w-72 md:w-80 ${
+                  className={`rounded-2xl p-2 sm:p-6 shadow-xl border transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 flex-shrink-0 w-56 sm:w-72 md:w-80 ${
                     isDarkMode 
                       ? 'bg-gray-700 border-gray-600' 
                       : 'bg-white border-gray-200'
                   }`}
                 >
-                  <div className="flex items-start space-x-3 sm:space-x-4 mb-3 sm:mb-4">
+                  <div className="flex items-start space-x-2 sm:space-x-4 mb-2 sm:mb-4">
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover flex-shrink-0"
+                      className="w-10 h-10 sm:w-16 sm:h-16 rounded-full object-cover flex-shrink-0"
                     />
                     <div className="flex-1">
-                      <h3 className={`font-bold text-sm sm:text-lg ${
+                      <h3 className={`font-bold text-xs sm:text-lg ${
                         isDarkMode ? 'text-white' : 'text-gray-900'
                       }`}>
                         {item.name}
                       </h3>
-                      <p className={`text-xs sm:text-sm font-medium ${
+                      <p className={`text-xs font-medium ${
                         isDarkMode ? 'text-blue-400' : 'text-blue-600'
                       }`}>
                         {item.exam}
                       </p>
                       <div className="flex items-center mt-1">
                         {[...Array(item.rating)].map((_, i) => (
-                          <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
+                          <Star key={i} className="w-2 h-2 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
                         ))}
                       </div>
                     </div>
                   </div>
-                  <p className={`text-xs sm:text-sm leading-relaxed ${
+                  <p className={`text-xs leading-relaxed ${
                     isDarkMode ? 'text-gray-300' : 'text-gray-600'
                   }`}>
                     "{item.feedback}"
