@@ -135,10 +135,10 @@
   }
 }
 
-/* Much faster scroll animation for mobile */
+/* Very fast scroll animation for mobile - shows all students quickly */
 @media (max-width: 768px) {
   .animate-scroll {
-    animation: scroll 12s linear infinite;
+    animation: scroll 8s linear infinite;
   }
 }
 
