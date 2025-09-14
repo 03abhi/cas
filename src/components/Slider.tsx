@@ -76,11 +76,11 @@ const Slider: React.FC = () => {
 
         <div className="relative max-w-7xl mx-auto">
           {/* Slider Container */}
-          <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
+          <div className="relative overflow-hidden rounded-3xl shadow-2xl bg-white dark:bg-gray-800">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
               {slides.map((slide) => (
                 <div
                   key={slide.id}
@@ -132,7 +132,6 @@ const Slider: React.FC = () => {
                 </div>
               ))}
             </div>
-
           </div>
 
           {/* Dots Indicator */}

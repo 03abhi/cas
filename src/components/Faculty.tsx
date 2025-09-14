@@ -48,15 +48,15 @@ const Faculty: React.FC = () => {
   return (
     <section id="faculty" className="py-8 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="container-custom">
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Learn from Industry Leaders
+        <div className="text-center mb-6 animate-fade-in">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Learn from Best Faculties
           </h2>
         </div>
 
         <div className="text-center mb-8">
           <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Our faculty consists of credentialed actuaries with extensive industry experience and proven track records in exam preparation.
+            Our faculty includes highly qualified actuaries with rich industry expertise and a strong history of guiding students to success in exams. Learn from the finest mentors in the field.
           </p>
         </div>
 

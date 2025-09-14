@@ -17,9 +17,8 @@ const Header: React.FC = () => {
           </div>
           
           <nav className="hidden md:flex space-x-8">
-            <a href="#features" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium">Programs</a>
             <a href="#faculty" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium">Faculty</a>
-            <a href="#testimonials" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium">Reviews</a>
+            <a href="#student-feedback" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium">Reviews</a>
             <a href="#contact" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium">Contact</a>
           </nav>
 
@@ -60,9 +59,8 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden mobile-menu">
             <div className="px-3 pt-3 pb-4 space-y-1 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
-              <a href="#features" className="block px-3 py-2.5 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" onClick={() => setIsMenuOpen(false)}>Programs</a>
               <a href="#faculty" className="block px-3 py-2.5 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" onClick={() => setIsMenuOpen(false)}>Faculty</a>
-              <a href="#testimonials" className="block px-3 py-2.5 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" onClick={() => setIsMenuOpen(false)}>Reviews</a>
+              <a href="#student-feedback" className="block px-3 py-2.5 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" onClick={() => setIsMenuOpen(false)}>Reviews</a>
               <a href="#contact" className="block px-3 py-2.5 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</a>
               <div className="pt-3 space-y-2">
                 <a href="https://wa.me/918618197603" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center space-x-2 px-4 py-2.5 bg-green-500 hover:bg-green-600 text-white rounded-xl font-medium hover-lift shadow-md text-sm sm:text-base" onClick={() => setIsMenuOpen(false)}>

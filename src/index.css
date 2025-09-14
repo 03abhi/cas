@@ -36,6 +36,91 @@
 .animate-stagger-3 { animation-delay: 0.3s; }
 .animate-stagger-4 { animation-delay: 0.4s; }
 
+/* Sequential fade-in animations for heading lines - 4 second cycle */
+.animate-fade-in-line-1 {
+  animation: fadeInLineCycle 4s ease-in-out infinite;
+  opacity: 0;
+  animation-delay: 0s;
+}
+
+.animate-fade-in-line-2 {
+  animation: fadeInLineCycle 4s ease-in-out infinite;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+.animate-fade-in-line-3 {
+  animation: fadeInLineCycle 4s ease-in-out infinite;
+  opacity: 0;
+  animation-delay: 1.0s;
+}
+
+@keyframes fadeInLine {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLineCycle {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* Fade in-out animation for exam text */
+.animate-fade-in-out {
+  animation: fadeInOut 6s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Slow spin animation for glowing borders */
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 /* Continuous horizontal scroll animation */
 .animate-scroll {
   animation: scroll 30s linear infinite;
@@ -47,6 +132,25 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* Running gradient animation */
+.animate-running-gradient {
+  animation: running-gradient 3s ease-in-out infinite;
+}
+
+@keyframes running-gradient {
+  0% {
+    transform: translateX(-100%) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) rotate(360deg);
+    opacity: 0;
   }
 }
 

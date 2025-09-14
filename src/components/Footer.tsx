@@ -4,8 +4,8 @@ import { Facebook, Linkedin, Instagram, Mail } from 'lucide-react';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 dark:bg-black text-white">
-      <div className="container-custom py-16 lg:py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="container-custom py-8 lg:py-12">
+        <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-6">
           <div>
             <div className="text-3xl font-bold text-primary-400 mb-6">
               <div className="flex items-center space-x-2">
@@ -15,9 +15,6 @@ const Footer: React.FC = () => {
                 </div>
               </div>
             </div>
-            <p className="text-gray-300 mb-8 leading-relaxed text-lg">
-              Empowering the next generation of actuaries with expert instruction, comprehensive materials, and proven success strategies.
-            </p>
             <div className="flex space-x-6">
               <a href="https://www.facebook.com/learncas" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-800 dark:bg-gray-900 rounded-xl hover:bg-primary-600 transition-all duration-300 transform hover:scale-110">
                 <Facebook className="w-6 h-6" />
@@ -31,19 +28,9 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-start-3">
-            <h4 className="text-xl font-bold mb-6">Company</h4>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-primary-400 transition-colors font-medium text-lg">About Us</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary-400 transition-colors font-medium text-lg">Faculty</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary-400 transition-colors font-medium text-lg">Success Stories</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary-400 transition-colors font-medium text-lg">Blog</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary-400 transition-colors font-medium text-lg">Careers</a></li>
-            </ul>
-          </div>
         </div>
 
-        <div className="border-t border-gray-800 dark:border-gray-700 mt-16 pt-12">
+        <div className="border-t border-gray-800 dark:border-gray-700 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 mb-4 md:mb-0 font-medium text-lg">
               © 2025 CAS Concepts And Skills. All rights reserved.

@@ -16,9 +16,9 @@ const StudentFeedback: React.FC = () => {
     },
     {
       id: 2,
-      name: "Derek Foley",
+      name: "Amrit",
       exam: "NEET - Rank 1250",
-      image: "/Derek Foley.png",
+      image: "/amrit.jpeg",
       feedback: "The comprehensive study material and regular mock tests at CAS Classes prepared me perfectly for NEET. The faculty's teaching methodology is outstanding and helped me secure a great rank.",
       rating: 5
     },
@@ -26,7 +26,7 @@ const StudentFeedback: React.FC = () => {
       id: 3,
       name: "Amrutha",
       exam: "JEE Advanced - AIR 4500",
-      image: "/amrutha.jpeg",
+      image: "/amrutha.jpg",
       feedback: "CAS Classes transformed my approach to problem-solving. The concept clarity sessions and practice tests were instrumental in my JEE Advanced success. Highly recommended for serious aspirants.",
       rating: 5
     },
@@ -49,7 +49,7 @@ const StudentFeedback: React.FC = () => {
   ];
 
   return (
-    <section className={`py-16 transition-colors duration-300 ${
+    <section id="student-feedback" className={`pt-8 pb-16 transition-colors duration-300 ${
       isDarkMode ? 'bg-gray-800' : 'bg-gray-50'
     }`}>
       <div className="container-custom">
@@ -60,9 +60,10 @@ const StudentFeedback: React.FC = () => {
             Student Feedback
           </h2>
           <p className={`text-xl lg:text-2xl ${
-            isDarkMode ? 'text-gray-300' : 'text-gray-600'
+            isDarkMode ? 'text-white' : 'text-gray-900'
           }`}>
-            Hear from our successful students
+            <span className={`font-bold ${isDarkMode ? 'text-blue-400' : 'text-blue-400'}`}>Real</span> stories. <span className={`font-bold ${isDarkMode ? 'text-blue-400' : 'text-blue-400'}`}>Real</span> success.<br />
+            See how our students achieved their dreams.
           </p>
         </div>
 
