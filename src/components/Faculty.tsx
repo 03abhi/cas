@@ -49,30 +49,30 @@ const Faculty: React.FC = () => {
     <section id="faculty" className="py-8 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="container-custom">
         <div className="text-center mb-6 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Learn from Best Faculties
           </h2>
         </div>
 
-        <div className="text-center mb-8">
-          <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        <div className="text-center mb-6 sm:mb-8">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
             Our faculty includes highly qualified actuaries with rich industry expertise and a strong history of guiding students to success in exams. Learn from the finest mentors in the field.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
           {faculty.map((instructor, index) => (
             <div 
               key={index}
-              className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl hover:bg-blue-200 dark:hover:bg-blue-800/40 transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 group text-center h-48 flex flex-col items-center justify-center"
+              className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl hover:bg-blue-200 dark:hover:bg-blue-800/40 transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 group text-center h-40 sm:h-48 flex flex-col items-center justify-center p-3"
             >
               <img 
                 src={instructor.image} 
                 alt={instructor.name}
-                className="w-16 h-16 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105 mb-2"
+                className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105 mb-2"
               />
-              <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-1">{instructor.name}</h3>
-              <p className="text-primary-600 dark:text-primary-400 font-medium text-xs">{instructor.credentials}</p>
+              <h3 className="text-xs sm:text-sm font-bold text-gray-900 dark:text-white mb-1 leading-tight">{instructor.name}</h3>
+              <p className="text-primary-600 dark:text-primary-400 font-medium text-xs leading-tight">{instructor.credentials}</p>
             </div>
           ))}
         </div>

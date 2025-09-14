@@ -281,7 +281,7 @@
 
 @media (max-width: 640px) {
   .container-custom {
-    @apply px-2;
+    @apply px-3;
   }
   
   /* Extra small screens */
@@ -299,5 +299,26 @@
   
   .text-responsive-4xl {
     @apply text-2xl;
+  }
+  
+  /* Mobile-specific improvements */
+  .mobile-menu {
+    @apply max-h-screen overflow-y-auto;
+  }
+  
+  /* Better touch targets for mobile */
+  .btn-primary,
+  .btn-secondary {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Improve form inputs on mobile */
+  input, select, textarea {
+    @apply text-base; /* Prevents zoom on iOS */
+  }
+  
+  /* Better spacing for mobile cards */
+  .card-mobile {
+    @apply p-4 mx-2;
   }
 }

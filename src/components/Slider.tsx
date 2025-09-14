@@ -65,11 +65,11 @@ const Slider: React.FC = () => {
   return (
     <section className="relative bg-gray-50 dark:bg-gray-800 transition-colors duration-300 overflow-hidden">
       <div className="container-custom py-10">
-        <div className="text-center mb-7">
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-5">
+        <div className="text-center mb-6 sm:mb-7">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-5">
             Success Stories from Our Students
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
             Our toppers who made us proud
           </p>
         </div>
@@ -84,43 +84,43 @@ const Slider: React.FC = () => {
               {slides.map((slide) => (
                 <div
                   key={slide.id}
-                  className="w-full flex-shrink-0 relative min-h-[400px] lg:min-h-[500px]"
+                  className="w-full flex-shrink-0 relative min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]"
                 >
                   <div className="absolute inset-0 bg-white dark:bg-gray-800"></div>
-                  <div className="relative z-10 flex items-center min-h-[400px] lg:min-h-[500px]">
+                  <div className="relative z-10 flex items-center min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]">
                     <div className="container-custom">
-                      <div className="grid lg:grid-cols-2 gap-10 items-center">
-                        <div className="text-gray-900 dark:text-white">
-                          <h3 className="text-3xl lg:text-5xl font-bold mb-5 leading-tight">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 items-center">
+                        <div className="text-gray-900 dark:text-white text-center lg:text-left order-2 lg:order-1">
+                          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-3 sm:mb-5 leading-tight">
                             {slide.title}
                           </h3>
-                          <p className="text-xl lg:text-2xl leading-relaxed mb-7 text-gray-600 dark:text-gray-300">
+                          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed mb-4 sm:mb-7 text-gray-600 dark:text-gray-300">
                             {slide.description}
                           </p>
-                          <div className="flex flex-col sm:flex-row gap-4">
+                          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                             <a
                               href="#contact"
-                              className="inline-flex items-center justify-center px-7 py-4 bg-primary-600 dark:bg-primary-500 text-white font-bold rounded-xl hover:bg-primary-700 dark:hover:bg-primary-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                              className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-4 bg-primary-600 dark:bg-primary-500 text-white font-bold rounded-xl hover:bg-primary-700 dark:hover:bg-primary-600 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
                             >
                               Get Started Today
                             </a>
                           </div>
                         </div>
-                        <div className="relative">
+                        <div className="relative order-1 lg:order-2">
                           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                             <img
                               src={slide.image}
                               alt={slide.title}
                               className={`w-full object-cover ${
                                 slide.id === 2 || slide.id === 3 
-                                  ? 'h-auto' 
+                                  ? 'h-[200px] sm:h-[300px] lg:h-auto' 
                                   : slide.id === 1
-                                  ? 'h-[450px] lg:h-[500px]'
+                                  ? 'h-[200px] sm:h-[300px] lg:h-[450px] xl:h-[500px]'
                                   : slide.id === 4
-                                  ? 'h-[450px] lg:h-[500px]'
+                                  ? 'h-[200px] sm:h-[300px] lg:h-[450px] xl:h-[500px]'
                                   : slide.id === 5
-                                  ? 'h-[460px] lg:h-[510px]'
-                                  : 'h-[420px] lg:h-[470px]'
+                                  ? 'h-[200px] sm:h-[300px] lg:h-[460px] xl:h-[510px]'
+                                  : 'h-[200px] sm:h-[300px] lg:h-[420px] xl:h-[470px]'
                               }`}
                             />
                             <div className="absolute inset-0 bg-black bg-opacity-20"></div>

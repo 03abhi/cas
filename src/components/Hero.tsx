@@ -73,9 +73,9 @@ Thank you!`;
         </>
       )}
       <div className="container-custom relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center min-h-[70vh] py-8">
-          <div className="animate-fade-in-up text-center lg:text-left">
-            <h1 className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 leading-tight text-left ${
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center min-h-[60vh] sm:min-h-[70vh] py-4 sm:py-8">
+          <div className="animate-fade-in-up text-center lg:text-left order-2 lg:order-1">
+            <h1 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 leading-tight text-center lg:text-left ${
               isDarkMode ? 'text-white' : 'text-gray-900'
             }`}>
               <div className="animate-fade-in-line-1">COACHING STUDENTS</div>
@@ -85,7 +85,7 @@ Thank you!`;
               <div className="animate-fade-in-line-3">THROUGH CUSTOMIZED STUDY PLANS</div>
             </h1>
             
-            <div className="space-y-3 mb-6">
+            <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
               <div className={`rounded-lg shadow-md p-3 sm:p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-1 animate-stagger-1 ${
                 isDarkMode ? 'bg-gray-800' : 'bg-white'
               }`}>
@@ -97,7 +97,7 @@ Thank you!`;
                       isDarkMode ? 'text-blue-400' : 'text-blue-600'
                     }`}></i>
                   </div>
-                  <span className={`font-bold text-base sm:text-lg ${
+                  <span className={`font-bold text-sm sm:text-base lg:text-lg ${
                     isDarkMode ? 'text-white' : 'text-gray-900'
                   }`}>Deep Analysis</span>
                 </div>
@@ -114,7 +114,7 @@ Thank you!`;
                       isDarkMode ? 'text-green-400' : 'text-green-600'
                     }`}></i>
                   </div>
-                  <span className={`font-bold text-base sm:text-lg ${
+                  <span className={`font-bold text-sm sm:text-base lg:text-lg ${
                     isDarkMode ? 'text-white' : 'text-gray-900'
                   }`}>Personalized Plan for Each Student</span>
                 </div>
@@ -131,7 +131,7 @@ Thank you!`;
                       isDarkMode ? 'text-purple-400' : 'text-purple-600'
                     }`}></i>
                   </div>
-                  <span className={`font-bold text-base sm:text-lg ${
+                  <span className={`font-bold text-sm sm:text-base lg:text-lg ${
                     isDarkMode ? 'text-white' : 'text-gray-900'
                   }`}>Small & Focused Batches</span>
                 </div>
@@ -148,7 +148,7 @@ Thank you!`;
                       isDarkMode ? 'text-yellow-400' : 'text-yellow-600'
                     }`}></i>
                   </div>
-                  <span className={`font-bold text-base sm:text-lg ${
+                  <span className={`font-bold text-sm sm:text-base lg:text-lg ${
                     isDarkMode ? 'text-white' : 'text-gray-900'
                   }`}>Faster Learning Curve Through Personalization</span>
                 </div>
@@ -156,7 +156,7 @@ Thank you!`;
             </div>
 
             <div className="text-center lg:text-left">
-              <p className={`text-lg sm:text-xl lg:text-2xl font-bold animate-fade-in-out ${
+              <p className={`text-base sm:text-lg lg:text-xl xl:text-2xl font-bold animate-fade-in-out ${
                 isDarkMode ? 'text-blue-400' : 'text-blue-600'
               }`}>
                 Foundation . CBSE . IIT-JEE . NEET
@@ -165,7 +165,7 @@ Thank you!`;
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="animate-fade-in-up">
+          <div className="animate-fade-in-up order-1 lg:order-2">
             <div className={`rounded-xl p-6 sm:p-8 shadow-lg ${
               isDarkMode 
                 ? 'bg-gray-800' 

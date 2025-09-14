@@ -9,10 +9,10 @@ const Header: React.FC = () => {
   return (
     <header className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
       <div className="container-custom">
-        <div className="flex justify-between items-center h-16 sm:h-20">
+        <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
           <div className="flex items-center">
             <a href="#" className="flex items-center" aria-label="CAS Classes Home">
-              <img src="/logo.jpg" alt="CAS Classes" className="h-12 sm:h-16 w-auto object-contain img-responsive" />
+              <img src="/logo.jpg" alt="CAS Classes" className="h-10 sm:h-12 md:h-16 w-auto object-contain img-responsive" />
             </a>
           </div>
           
@@ -39,19 +39,19 @@ const Header: React.FC = () => {
             <a href="tel:8618197603" className="btn-primary hover-lift text-sm lg:text-base">Call Us</a>
           </div>
 
-          <div className="md:hidden flex items-center space-x-1 sm:space-x-2">
+          <div className="md:hidden flex items-center space-x-2">
             <button 
               onClick={toggleDarkMode}
-              className="p-1.5 sm:p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
               aria-label="Toggle dark mode"
             >
-              {isDarkMode ? <Sun className="w-4 h-4 sm:w-5 sm:h-5" /> : <Moon className="w-4 h-4 sm:w-5 sm:h-5" />}
+              {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
             <button 
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300" />}
+              {isMenuOpen ? <X className="w-6 h-6 text-gray-700 dark:text-gray-300" /> : <Menu className="w-6 h-6 text-gray-700 dark:text-gray-300" />}
             </button>
           </div>
         </div>
