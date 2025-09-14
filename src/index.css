@@ -321,4 +321,24 @@
   .card-mobile {
     @apply p-4 mx-2;
   }
+  
+  /* Mobile header improvements */
+  .mobile-header {
+    @apply px-3 py-2;
+  }
+  
+  /* Mobile footer improvements */
+  .mobile-footer {
+    @apply text-center space-y-4;
+  }
+  
+  /* Better mobile navigation */
+  .mobile-nav-item {
+    @apply py-3 px-4 text-base font-medium;
+  }
+  
+  /* Mobile social icons */
+  .mobile-social {
+    @apply justify-center space-x-4;
+  }
 }
