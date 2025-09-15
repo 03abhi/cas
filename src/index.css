@@ -171,11 +171,16 @@
   }
 }
 
-/* Very fast scroll animation for mobile - shows all students quickly */
+/* Slower scroll animation for mobile - shows all students properly */
 @media (max-width: 768px) {
   .animate-scroll {
-    animation: scroll 8s linear infinite;
+    animation: scroll 20s linear infinite;
   }
+}
+
+/* Pause animation on hover */
+.hover\:pause-animation:hover {
+  animation-play-state: paused;
 }
 
 /* Running gradient animation */

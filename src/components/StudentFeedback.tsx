@@ -70,12 +70,12 @@ const StudentFeedback: React.FC = () => {
         <div className="relative max-w-7xl mx-auto">
           {/* Auto-scrolling Container */}
           <div className="relative overflow-hidden rounded-3xl">
-            <div className="flex gap-1 sm:gap-4 md:gap-6 animate-scroll">
+            <div className="flex gap-1 sm:gap-4 md:gap-6 animate-scroll hover:pause-animation">
               {/* Duplicate the testimonials for seamless loop */}
               {[...testimonials, ...testimonials].map((item, index) => (
                 <div
                   key={`${item.id}-${index}`}
-                  className={`rounded-2xl p-2 sm:p-6 shadow-xl border transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 flex-shrink-0 w-56 sm:w-72 md:w-80 ${
+                  className={`rounded-2xl p-2 sm:p-6 shadow-xl border transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 flex-shrink-0 w-48 sm:w-72 md:w-80 ${
                     isDarkMode 
                       ? 'bg-gray-700 border-gray-600' 
                       : 'bg-white border-gray-200'

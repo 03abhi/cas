@@ -189,7 +189,7 @@ Thank you!`;
                       isDarkMode ? 'text-yellow-400' : 'text-yellow-600'
                     }`}></i>
                   </div>
-                  <span className={`font-bold text-sm sm:text-base lg:text-lg ${
+                  <span className={`font-bold text-sm sm:text-base lg:text-lg leading-tight ${
                     isDarkMode ? 'text-white' : 'text-gray-900'
                   }`}>Faster Learning Curve Through Personalization</span>
                 </div>
