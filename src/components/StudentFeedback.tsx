@@ -26,7 +26,7 @@ const StudentFeedback: React.FC = () => {
       id: 3,
       name: "Amrutha",
       exam: "JEE Advanced - AIR 4500",
-      image: "/amrutha.jpeg",
+      image: "/amrutha.jpg",
       feedback: "CAS Classes transformed my approach to problem-solving. The concept clarity sessions and practice tests were instrumental in my JEE Advanced success. Highly recommended for serious aspirants.",
       rating: 5
     },
