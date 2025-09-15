@@ -75,7 +75,7 @@ const StudentFeedback: React.FC = () => {
               {[...testimonials, ...testimonials].map((item, index) => (
                 <div
                   key={`${item.id}-${index}`}
-                  className={`rounded-2xl p-2 sm:p-6 shadow-xl border transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 flex-shrink-0 w-48 sm:w-72 md:w-80 ${
+                  className={`rounded-2xl p-2 sm:p-6 shadow-xl border transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 flex-shrink-0 w-40 sm:w-72 md:w-80 ${
                     isDarkMode 
                       ? 'bg-gray-700 border-gray-600' 
                       : 'bg-white border-gray-200'

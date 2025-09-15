@@ -181,7 +181,7 @@ Thank you!`;
               <div className={`rounded-lg shadow-md p-3 sm:p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-1 animate-stagger-4 ${
                 isDarkMode ? 'bg-gray-800/10' : 'bg-white/8'
               }`}>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2 sm:space-x-3">
                   <div className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center ${
                     isDarkMode ? 'bg-yellow-900/30' : 'bg-yellow-100'
                   }`}>
