@@ -63,31 +63,56 @@ Thank you!`;
         ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900' 
         : 'bg-white relative overflow-hidden'
     }`}>
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0 -top-[28rem] -left-8">
+        <img 
+          src="/background-image.png" 
+          alt="CAS Classes Background" 
+          className="w-full h-full object-cover object-top object-left brightness-110"
+        />
+        {/* General background overlay */}
+        <div className="absolute inset-0 bg-white/40 dark:bg-gray-900/40"></div>
+        {/* Semi-transparent overlay for student figure area */}
+        <div 
+          className="absolute top-0 left-0 w-1/2 h-3/4 opacity-60"
+          style={{
+            background: 'radial-gradient(ellipse 80% 100% at 30% 20%, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,0.2) 70%, transparent 100%)'
+          }}
+        ></div>
+        {/* Additional subtle overlay for better blending */}
+        <div 
+          className="absolute top-0 left-0 w-1/3 h-1/2 opacity-40"
+          style={{
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 50%, transparent 100%)'
+          }}
+        ></div>
+      </div>
+      
       {/* Subtle light-blue abstract shapes */}
       {!isDarkMode && (
         <>
-          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-100 rounded-full opacity-30 blur-xl"></div>
-          <div className="absolute top-40 right-20 w-24 h-24 bg-blue-200 rounded-full opacity-20 blur-lg"></div>
-          <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-blue-50 rounded-full opacity-25 blur-2xl"></div>
-          <div className="absolute bottom-40 right-1/3 w-28 h-28 bg-blue-100 rounded-full opacity-30 blur-lg"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-100 rounded-full opacity-30 blur-xl z-10"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 bg-blue-200 rounded-full opacity-20 blur-lg z-10"></div>
+          <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-blue-50 rounded-full opacity-25 blur-2xl z-10"></div>
+          <div className="absolute bottom-40 right-1/3 w-28 h-28 bg-blue-100 rounded-full opacity-30 blur-lg z-10"></div>
         </>
       )}
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center min-h-[60vh] sm:min-h-[70vh] py-4 sm:py-8">
-          <div className="animate-fade-in-up text-center lg:text-left order-2 lg:order-1">
+          <div className="animate-fade-in-up text-center lg:text-left order-1 lg:order-1">
             <h1 className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 leading-tight text-center lg:text-left ${
               isDarkMode ? 'text-white' : 'text-gray-900'
             }`}>
-              <div className="animate-fade-in-line-1">COACHING STUDENTS</div>
-              <div className="animate-fade-in-line-2">
+              <div className="animate-hero-line-1">COACHING STUDENTS</div>
+              <div className="animate-hero-line-2">
                 TO BUILD <span className={`${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>STRONG FOUNDATIONS</span>
               </div>
-              <div className="animate-fade-in-line-3">THROUGH CUSTOMIZED STUDY PLANS</div>
+              <div className="animate-hero-line-3">THROUGH CUSTOMIZED STUDY PLANS</div>
             </h1>
             
-            <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+            <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6 max-w-md">
               <div className={`rounded-lg shadow-md p-3 sm:p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-1 animate-stagger-1 ${
-                isDarkMode ? 'bg-gray-800' : 'bg-white'
+                isDarkMode ? 'bg-gray-800/30' : 'bg-white/30'
               }`}>
                 <div className="flex items-center space-x-3">
                   <div className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center ${
@@ -104,7 +129,7 @@ Thank you!`;
               </div>
               
               <div className={`rounded-lg shadow-md p-3 sm:p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-1 animate-stagger-2 ${
-                isDarkMode ? 'bg-gray-800' : 'bg-white'
+                isDarkMode ? 'bg-gray-800/30' : 'bg-white/30'
               }`}>
                 <div className="flex items-center space-x-3">
                   <div className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center ${
@@ -121,7 +146,7 @@ Thank you!`;
               </div>
               
               <div className={`rounded-lg shadow-md p-3 sm:p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-1 animate-stagger-3 ${
-                isDarkMode ? 'bg-gray-800' : 'bg-white'
+                isDarkMode ? 'bg-gray-800/30' : 'bg-white/30'
               }`}>
                 <div className="flex items-center space-x-3">
                   <div className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center ${
@@ -138,7 +163,7 @@ Thank you!`;
               </div>
               
               <div className={`rounded-lg shadow-md p-3 sm:p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-1 animate-stagger-4 ${
-                isDarkMode ? 'bg-gray-800' : 'bg-white'
+                isDarkMode ? 'bg-gray-800/30' : 'bg-white/30'
               }`}>
                 <div className="flex items-center space-x-3">
                   <div className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center ${
@@ -156,7 +181,7 @@ Thank you!`;
             </div>
 
             <div className="text-center lg:text-left">
-              <p className={`text-base sm:text-lg lg:text-xl xl:text-2xl font-bold animate-fade-in-out ${
+              <p className={`text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold animate-fade-in-out ${
                 isDarkMode ? 'text-blue-400' : 'text-blue-600'
               }`}>
                 Foundation . CBSE . IIT-JEE . NEET
@@ -165,11 +190,11 @@ Thank you!`;
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="animate-fade-in-up order-1 lg:order-2">
-            <div className={`rounded-xl p-6 sm:p-8 shadow-lg ${
+          <div className="animate-fade-in-up order-2 lg:order-2">
+            <div className={`rounded-xl p-6 sm:p-8 shadow-lg max-w-md mx-auto lg:ml-auto lg:mr-0 ${
               isDarkMode 
-                ? 'bg-gray-800' 
-                : 'bg-white'
+                ? 'bg-gray-800/20' 
+                : 'bg-white/20'
             }`}>
               
                 <h2 className={`text-xl sm:text-2xl font-bold mb-6 text-center animate-fade-in-up ${

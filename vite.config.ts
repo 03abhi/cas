@@ -10,9 +10,9 @@ export default defineConfig({
   logLevel: 'info',
   clearScreen: false,
   server: {
-    port: 5173,
+    port: 3000,
     host: '0.0.0.0',
     open: true,
-    strictPort: false
+    strictPort: true
   },
 });

@@ -30,6 +30,42 @@
   }
 }
 
+/* One-time fade in animation for hero text */
+.animate-fade-in-once {
+  animation: fadeInOnce 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInOnce {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered hero text animations */
+.animate-hero-line-1 {
+  animation: fadeInOnce 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0s;
+}
+
+.animate-hero-line-2 {
+  animation: fadeInOnce 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+.animate-hero-line-3 {
+  animation: fadeInOnce 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
 /* Staggered animation for bullet points */
 .animate-stagger-1 { animation-delay: 0.1s; }
 .animate-stagger-2 { animation-delay: 0.2s; }

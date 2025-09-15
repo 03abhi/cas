@@ -112,3 +112,4 @@ const SleekSlider: React.FC<SleekSliderProps> = ({
 export default SleekSlider;
 
 
+
